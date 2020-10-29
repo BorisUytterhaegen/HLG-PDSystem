@@ -1,0 +1,17 @@
+freq_WL2 0;
+level_1_WL2 0;
+level_2_WL2 0;
+level_3_WL2 0;
+level_4_WL2 0;
+bits_1_WL2 0;
+bits_2_WL2 0;
+bits_3_WL2 0;
+bits_4_WL2 0;
+offset_1_WL2 0;
+offset_2_WL2 0;
+offset_3_WL2 0;
+offset_4_WL2 0;
+invert_1_WL2 0;
+invert_2_WL2 0;
+invert_3_WL2 0;
+invert_4_WL2 0;
