@@ -1,0 +1,28 @@
+audioapi: 1
+noaudioin: False
+audioindev1: 4 2
+audioindevname1: Pro40-004ee3 (hardware)
+noaudioout: False
+audiooutdev1: 4 2
+audiooutdevname1: Pro40-004ee3 (hardware)
+audiobuf: 25
+rate: 48000
+callback: 0
+blocksize: 512
+midiapi: 0
+nomidiin: True
+nomidiout: True
+path1: /home/boris/HLG-PDSystem/externals/dynsend
+path2: /home/boris/HLG-PDSystem/externals/mrpeach
+path3: /home/boris/HLG-PDSystem/externals/zexy
+path4: /home/boris/HLG-PDSystem/modules
+path5: /home/boris/HLG-PDSystem/externals
+path6: /home/boris/HLG-PDSystem/externals/iemguts
+npath: 6
+standardpath: 1
+verbose: 0
+nloadlib: 0
+defeatrt: 0
+flags: 
+zoom: 1
+loading: no
