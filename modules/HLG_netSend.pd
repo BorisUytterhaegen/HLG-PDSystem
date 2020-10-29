@@ -1,13 +1,17 @@
-#N canvas 230 311 450 300 12;
-#X obj 130 130 route pgm_change pgm_load;
-#X obj 130 108 netsend;
-#X msg 130 86 connect pisound1 3000;
-#X floatatom 114 167 5 0 0 0 - - -;
-#X obj 130 203 list prepend pgm_change;
-#X obj 130 228 list trim;
-#X obj 130 253 print;
+#N canvas 364 289 450 300 12;
+#X obj 24 175 netsend;
+#X msg 24 153 connect pisound1 3000;
+#X floatatom 24 24 5 0 0 0 - - -;
+#X obj 24 48 list prepend pgm_change;
+#X obj 24 73 list trim;
+#X obj 253 24 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 253 44 list prepend pgm_load;
+#X obj 253 69 list trim;
 #X connect 1 0 0 0;
-#X connect 2 0 1 0;
+#X connect 2 0 3 0;
 #X connect 3 0 4 0;
-#X connect 4 0 5 0;
+#X connect 4 0 0 0;
 #X connect 5 0 6 0;
+#X connect 6 0 7 0;
+#X connect 7 0 0 0;

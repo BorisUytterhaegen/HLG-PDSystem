@@ -51,7 +51,7 @@
 #X msg 163 306 0 50;
 #X msg 210 306 1 50;
 #X obj 200 381 hsl 128 15 0 127 0 0 empty gain_\$1 gain -2 -8 0 10
--262144 -1 -1 6100 1;
+-262144 -1 -1 3200 1;
 #X msg 197 422 \$1 100;
 #X obj 197 443 line~;
 #X obj 107 457 *~;
@@ -59,7 +59,7 @@
 #X obj 109 59 loadbang;
 #X msg 109 80 32;
 #X obj 112 165 hsl 128 15 0 127 0 0 gain_\$1 gain_set_\$1 gain 132
-8 1 10 -99865 -262144 -262144 6100 1;
+8 1 10 -99865 -262144 -262144 3200 1;
 #X obj 197 401 expr $f1/16 +1;
 #X obj 340 286 del 10;
 #X obj 340 265 del 100;
@@ -76,6 +76,9 @@
 #X msg 460 36 listen 3000 pisound1;
 #X obj 479 123 s preset_set_all;
 #X obj 584 123 s load_pre_set_all;
+#X obj 511 149 print pgm_ch;
+#X obj 600 150 print set_preset;
+#X obj 460 14 loadbang;
 #X connect 5 0 6 0;
 #X connect 8 0 14 0;
 #X connect 9 0 15 0;
@@ -108,7 +111,10 @@
 #X connect 35 0 36 0;
 #X connect 37 0 35 0;
 #X connect 37 0 40 0;
+#X connect 37 0 42 0;
 #X connect 37 1 38 0;
 #X connect 37 1 41 0;
+#X connect 37 1 43 0;
 #X connect 39 0 34 0;
+#X connect 44 0 39 0;
 #X coords 0 -1 1 1 200 90 1 100 100;
