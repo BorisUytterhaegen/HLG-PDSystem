@@ -1,0 +1,9 @@
+min_attack_WC2 130;
+max_attack_WC2 0;
+random_attack_depth_WC2 0;
+min_release_WC2 200;
+max_release_WC2 0;
+random_release_depth_WC2 0;
+min_volume_WC2 100;
+max_volume_WC2 0;
+random_volume_depth_WC2 0;

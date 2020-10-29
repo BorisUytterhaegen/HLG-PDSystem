@@ -1,0 +1,128 @@
+#N canvas 91 22 897 852 10;
+#X obj 0 15 cnv 15 200 125 empty empty empty 12 12 1 14 -121663 -66577
+0;
+#X obj 10 70 bng 15 250 50 0 trigger_\$1 trigger_set_\$1 trigger 17
+7 1 10 -262144 -1 -1;
+#N canvas 827 127 528 675 wonkyContour 1;
+#X floatatom 76 154 5 0 0 1 attack attack_#1 -;
+#X floatatom 79 53 5 0 0 1 rnd_attack rnd_attack_#1 -;
+#X obj 46 208 +;
+#X obj 76 194 t b f;
+#X obj 46 93 random;
+#X obj 46 2 bng 15 250 50 0 empty random_trig_\$1 rnd_trig 17 7 0 10
+-257985 -1 -1;
+#X floatatom 232 159 5 0 127 1 release release_#1 -;
+#X floatatom 235 56 5 0 0 1 rnd_release rnd_release_#1 -;
+#X obj 202 213 +;
+#X obj 232 199 t b f;
+#X obj 202 101 random;
+#X obj 46 474 vline~;
+#X msg 46 453 1 \$1 \, 0 \$2 \$3;
+#X obj 46 369 pack f f f;
+#X floatatom 46 283 5 0 0 1 final_attack - -;
+#X floatatom 74 303 5 0 0 1 final_release - -;
+#X obj 103 348 +;
+#X obj 46 390 list prepend set;
+#X obj 46 411 list trim;
+#X msg 46 432 232 509 815;
+#X obj 166 419 bng 15 250 50 0 empty trigger_\$1 trigger 17 7 0 10
+-4034 -1 -1;
+#X obj 31 504 *~;
+#X obj 74 323 t b f b f;
+#X obj 31 251 receive~ in_\$1;
+#X obj 31 533 send~ out_\$1;
+#X obj 76 174 * 20;
+#X obj 79 73 * 20;
+#X obj 235 76 * 20;
+#X obj 232 179 * 20;
+#X obj 166 460 bng 15 250 50 0 random_trig_set_\$1 empty rnd_trig 17
+7 0 10 -4034 -1 -1;
+#X obj 166 439 spigot;
+#X obj 199 398 tgl 15 0 empty thru_\$1 thru 17 7 0 10 -262144 -1 -1
+0 1;
+#X obj 46 22 t b b;
+#X obj 202 132 * 0;
+#X obj 271 89 tgl 15 0 empty rnd_release_on_\$1 rnd_release_on 17 7
+0 10 -262144 -1 -1 0 1;
+#X obj 46 132 * 0;
+#X obj 115 89 tgl 15 0 empty rnd_attack_on_\$1 rnd_attack_on 17 7 0
+10 -262144 -1 -1 0 1;
+#X obj 115 109 t b f;
+#X obj 271 109 t b f;
+#X connect 0 0 25 0;
+#X connect 1 0 26 0;
+#X connect 2 0 14 0;
+#X connect 3 0 2 0;
+#X connect 3 1 2 1;
+#X connect 4 0 35 0;
+#X connect 5 0 32 0;
+#X connect 6 0 28 0;
+#X connect 7 0 27 0;
+#X connect 8 0 15 0;
+#X connect 9 0 8 0;
+#X connect 9 1 8 1;
+#X connect 10 0 33 0;
+#X connect 11 0 21 1;
+#X connect 12 0 11 0;
+#X connect 13 0 17 0;
+#X connect 14 0 13 0;
+#X connect 14 0 16 0;
+#X connect 15 0 22 0;
+#X connect 16 0 13 2;
+#X connect 17 0 18 0;
+#X connect 18 0 19 0;
+#X connect 19 0 12 0;
+#X connect 20 0 19 0;
+#X connect 20 0 30 0;
+#X connect 21 0 24 0;
+#X connect 22 0 13 0;
+#X connect 22 1 13 1;
+#X connect 22 2 16 0;
+#X connect 22 3 16 1;
+#X connect 23 0 21 0;
+#X connect 25 0 3 0;
+#X connect 26 0 4 1;
+#X connect 27 0 10 1;
+#X connect 28 0 9 0;
+#X connect 30 0 29 0;
+#X connect 31 0 30 1;
+#X connect 32 0 4 0;
+#X connect 32 1 10 0;
+#X connect 33 0 8 0;
+#X connect 34 0 38 0;
+#X connect 35 0 2 0;
+#X connect 36 0 37 0;
+#X connect 37 0 35 0;
+#X connect 37 1 35 1;
+#X connect 38 0 33 0;
+#X connect 38 1 33 1;
+#X restore 10 152 pd wonkyContour;
+#X obj 5 20 HLG_presetControl \$1 wonkyContour;
+#X obj 0 125 cnv 15 200 15 empty empty out_\$1 5 8 1 10 -233017 -66577
+0;
+#X obj 0 0 cnv 15 200 15 empty empty in_\$1 5 8 1 10 -233017 -66577
+0;
+#X obj 101 70 bng 15 250 50 0 random_trig_\$1 random_trig_set_\$1 rnd_trig
+17 7 1 10 -191407 -1 -1;
+#X obj 60 70 tgl 15 0 thru_\$1 thru_set_\$1 thru 17 7 1 10 -262144
+-1 -1 0 1;
+#X obj 216 133 HLG_parameter \$1 \$1 thru 5;
+#X obj 10 104 nbx 3 15 0 127 0 0 attack_\$1 attack_set_\$1 attack 0
+-8 1 10 -262144 -1 -1 0 256;
+#X obj 216 13 HLG_parameter \$1 \$1 attack 0;
+#X obj 216 33 HLG_parameter \$1 \$1 rnd_attack 1;
+#X obj 216 73 HLG_parameter \$1 \$1 release 3;
+#X obj 216 93 HLG_parameter \$1 \$1 rnd_release 4;
+#X obj 216 113 HLG_parameter \$1 \$1 rnd_release_on 5;
+#X obj 216 53 HLG_parameter \$1 \$1 rnd_attack_on 2;
+#X obj 47 104 nbx 3 15 0 127 0 0 rnd_attack_\$1 rnd_attack_set_\$1
+randm 0 -8 1 10 -262144 -1 -1 22 256;
+#X obj 103 104 nbx 3 15 0 127 0 0 release_\$1 release_set_\$1 release
+0 -8 1 10 -262144 -1 -1 4 256;
+#X obj 140 104 nbx 3 15 0 127 0 0 rnd_release_\$1 rnd_release_set_\$1
+randm 0 -8 1 10 -262144 -1 -1 30 256;
+#X obj 177 104 tgl 15 0 rnd_release_on_\$1 rnd_release_on_set_\$1 on
+0 -8 1 10 -262144 -1 -1 0 1;
+#X obj 84 104 tgl 15 0 rnd_attack_on_\$1 rnd_attack_on_set_\$1 on 0
+-8 1 10 -262144 -1 -1 0 1;
+#X coords 0 -1 1 1 200 140 2 0 0;

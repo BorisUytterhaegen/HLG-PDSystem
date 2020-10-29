@@ -1,0 +1,7 @@
+runstop_WM2 1;
+min_length_WM2 200;
+max_lag_WM2 100;
+random_length_depth_WM2 127;
+min_repeats_WM2 16;
+max_extras_WM2 0;
+random_extras_depth_WM2 0;

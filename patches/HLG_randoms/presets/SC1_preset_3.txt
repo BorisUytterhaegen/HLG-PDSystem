@@ -1,0 +1,16 @@
+out_WV1 in_WC1 VCA1;
+out_WV2 in_WC2 VCA2;
+out_WV3 in_WC3 VCA3;
+out_WK1 FM_WV1 KICK;
+mute_1_SC1 1;
+mute_2_SC1 1;
+mute_3_SC1 1;
+mute_4_SC1 1;
+level_1_SC1 127;
+level_2_SC1 127;
+level_3_SC1 127;
+level_4_SC1 88.1225;
+invert_1_SC1 0;
+invert_2_SC1 0;
+invert_3_SC1 0;
+invert_4_SC1 0;

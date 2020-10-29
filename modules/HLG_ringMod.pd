@@ -1,0 +1,21 @@
+#N canvas 562 215 450 300 10;
+#X obj 10 89 r~ in1_\$1;
+#X obj 80 89 r~ in2_\$1;
+#X obj 10 110 *~;
+#X obj 10 131 s~ out_\$1;
+#X obj 0 15 cnv 15 200 35 empty empty empty 20 12 0 14 -215223 -66577
+0;
+#X obj 5 20 cnv 15 95 25 empty empty \$1 5 12 1 16 -99865 -191407 0
+;
+#X obj 0 50 cnv 15 200 15 empty empty out_\$1 5 8 1 10 -233017 -66577
+0;
+#X obj 0 0 cnv 15 100 15 empty empty in1_\$1 5 8 1 10 -233017 -66577
+0;
+#X obj 100 0 cnv 15 100 15 empty empty in2_\$1 5 8 1 10 -191407 -66577
+0;
+#X obj 100 20 cnv 15 95 25 empty empty ringMod 5 12 1 10 -99865 -262144
+0;
+#X connect 0 0 2 0;
+#X connect 1 0 2 1;
+#X connect 2 0 3 0;
+#X coords 0 -1 1 1 200 65 1 0 0;

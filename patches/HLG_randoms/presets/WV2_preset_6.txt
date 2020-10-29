@@ -1,0 +1,9 @@
+pitch_WV2 82;
+max_pitch_WV2 0;
+rnd_pitch_WV2 0;
+FM_pitch_WV2 0;
+FM_max_pitch_WV2 0;
+rnd_FM_pitch_WV2 0;
+FM_amount_WV2 0;
+FM_max_amount_WV2 0;
+rnd_FM_amount_WV2 0;

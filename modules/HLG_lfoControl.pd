@@ -1,0 +1,53 @@
+#N canvas 480 239 450 389 10;
+#X obj 96 247 snapshot~;
+#X obj 42 233 metro;
+#X floatatom 141 129 5 0 0 0 bits bits_#1_#2 -;
+#X obj 69 170 expr 1000/$f1/$f2;
+#X obj 141 149 t b f;
+#X obj 42 192 loadbang;
+#X msg 42 213 1;
+#X floatatom 191 248 5 0 127 0 level level_#1_#2 -;
+#X obj 96 268 expr $f2*($f1+1)/2 + $f3;
+#X floatatom 271 248 5 -63 64 0 offset offset_#1_#2 -;
+#X floatatom 69 129 5 0 0 0 freq freq_#2 -;
+#X obj 96 309 s out_\$1_\$2;
+#X obj 96 192 r~ osc_\$2;
+#X obj 191 137 tgl 15 0 empty invert_\$1_\$2 invert 17 7 1 10 -262144
+-1 -1 1 1;
+#X obj 191 157 expr -2*($f1-0.5);
+#X msg 191 178 \$1 50;
+#X obj 191 199 line~;
+#X obj 96 213 *~;
+#X obj 0 0 cnv 15 200 35 empty empty empty 20 12 0 14 -261889 -66577
+0;
+#X obj 41 15 nbx 3 15 -1e+37 1e+37 0 0 bits_\$1_\$2 bits_set_\$1_\$2
+bits 0 -8 1 10 -204053 -1 -1 127 256;
+#X obj 5 15 nbx 3 15 0 127 0 0 level_\$1_\$2 level_set_\$1_\$2 level
+0 -8 1 10 -204053 -1 -1 100 256;
+#X obj 77 15 nbx 3 15 -1e+37 1e+37 0 0 offset_\$1_\$2 offset_set_\$1_\$2
+offset 0 -8 1 10 -204053 -1 -1 0 256;
+#X obj 113 15 tgl 15 0 invert_\$1_\$2 invert_set_\$1_\$2 inv 0 -8 1
+10 -204053 -1 -1 1 1;
+#X obj 134 15 hsl 60 15 0 127 0 0 empty out_\$1_\$2 out_\$1_\$2 0 -8
+1 10 -204053 -1 -1 3039 1;
+#X obj 96 289 change;
+#X connect 0 0 8 0;
+#X connect 1 0 0 0;
+#X connect 2 0 4 0;
+#X connect 3 0 1 1;
+#X connect 4 0 3 0;
+#X connect 4 1 3 1;
+#X connect 5 0 6 0;
+#X connect 6 0 1 0;
+#X connect 7 0 8 1;
+#X connect 8 0 24 0;
+#X connect 9 0 8 2;
+#X connect 10 0 3 0;
+#X connect 12 0 17 0;
+#X connect 13 0 14 0;
+#X connect 14 0 15 0;
+#X connect 15 0 16 0;
+#X connect 16 0 17 1;
+#X connect 17 0 0 0;
+#X connect 24 0 11 0;
+#X coords 0 -1 1 1 200 35 2 0 0;

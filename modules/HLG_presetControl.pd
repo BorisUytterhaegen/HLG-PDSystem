@@ -1,0 +1,87 @@
+#N canvas 556 168 601 529 10;
+#X msg 201 434 click;
+#X obj 318 488 route updated;
+#X obj 318 507 s updated_\$1;
+#X obj 171 372 list prepend write;
+#X obj 171 393 list trim;
+#X msg 152 134 read;
+#X msg 211 154 write;
+#X obj 201 414 bng 15 250 50 0 empty edit_\$1 edit 17 7 0 10 -4034
+-1 -1;
+#X obj 211 113 bng 15 250 50 0 empty save_\$1 save 17 7 0 10 -258113
+-1 -1;
+#X obj 171 455 text define parameters_\$1;
+#X obj 171 217 list fromsymbol;
+#X obj 171 346 list tosymbol;
+#X floatatom 405 271 5 0 0 0 preset_number preset_#1 -;
+#X obj 405 312 list fromsymbol;
+#X obj 171 326 list append;
+#X msg 405 291 symbol \$1.txt;
+#X obj 133 53 bng 15 250 50 0 empty load_\$1 load 17 7 0 10 -260097
+-1 -1;
+#X obj 152 175 t b b a;
+#X obj 171 195 symbol, f 43;
+#X obj 426 164 list tosymbol;
+#X obj 198 265 symbol \$1_preset_;
+#X obj 171 306 list append;
+#X obj 171 238 t a b;
+#X obj 198 286 list fromsymbol;
+#X obj 0 0 cnv 15 190 25 empty empty \$1 6 13 1 18 -99865 -191407 0
+;
+#X obj 0 25 cnv 15 190 20 empty empty \$2 6 6 1 10 -99865 -262144 0
+;
+#X obj 95 5 bng 15 250 50 0 edit_\$1 edit_all edit 17 7 1 10 -99865
+-1 -191407;
+#X obj 143 5 bng 15 250 50 0 save_\$1 save_all save 17 7 1 10 -99865
+-191407 -191407;
+#X obj 143 25 nbx 3 15 1 127 0 0 preset_\$1 preset_set_\$1 empty 0
+-8 1 10 -99865 -262144 -1 2 256;
+#X obj 95 25 bng 15 250 50 0 load_\$1 load_set_\$1 load 17 7 1 10 -191407
+-262144 -262144;
+#X obj 188 -30 r save_all;
+#X obj 268 -30 r preset_all;
+#X obj 223 -4 r load_all;
+#X obj 133 73 t b b b;
+#X obj 172 93 s load_seq_\$1;
+#X obj 426 143 r patch_path_presets;
+#X obj 211 133 t b b;
+#X obj 213 491 print te;
+#X obj 211 175 print write;
+#X obj 309 122 s save_value_\$1;
+#X connect 0 0 9 0;
+#X connect 1 0 2 0;
+#X connect 3 0 4 0;
+#X connect 4 0 9 0;
+#X connect 5 0 17 0;
+#X connect 6 0 17 0;
+#X connect 6 0 38 0;
+#X connect 7 0 0 0;
+#X connect 8 0 36 0;
+#X connect 9 1 1 0;
+#X connect 9 1 37 0;
+#X connect 10 0 22 0;
+#X connect 11 0 3 0;
+#X connect 12 0 15 0;
+#X connect 13 0 14 1;
+#X connect 14 0 11 0;
+#X connect 15 0 13 0;
+#X connect 16 0 33 0;
+#X connect 17 0 2 0;
+#X connect 17 1 18 0;
+#X connect 17 2 3 1;
+#X connect 18 0 10 0;
+#X connect 19 0 18 1;
+#X connect 20 0 23 0;
+#X connect 21 0 14 0;
+#X connect 22 0 21 0;
+#X connect 22 1 20 0;
+#X connect 23 0 21 1;
+#X connect 30 0 27 0;
+#X connect 31 0 28 0;
+#X connect 32 0 29 0;
+#X connect 33 1 5 0;
+#X connect 33 2 34 0;
+#X connect 35 0 19 0;
+#X connect 36 0 6 0;
+#X connect 36 1 39 0;
+#X coords 0 -1 1 1 190 45 2 0 0;

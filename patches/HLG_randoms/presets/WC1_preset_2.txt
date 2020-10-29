@@ -1,0 +1,6 @@
+attack_WC1 1;
+rnd_attack_WC1 3;
+rnd_attack_on_WC1 0;
+release_WC1 4;
+rnd_release_WC1 0;
+thru_WC1 0;

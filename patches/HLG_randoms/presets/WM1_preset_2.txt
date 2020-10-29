@@ -1,0 +1,7 @@
+runstop_WM1 1;
+min_length_WM1 216;
+max_lag_WM1 12;
+random_length_depth_WM1 94.7294;
+min_repeats_WM1 5;
+max_extras_WM1 0;
+random_extras_depth_WM1 0;

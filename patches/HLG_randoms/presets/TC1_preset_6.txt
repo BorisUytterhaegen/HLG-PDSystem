@@ -1,0 +1,16 @@
+reset_WM1 clock_set_1_WS1 tick1;
+reset_WM1 clock_set_2 WS1 rst2;
+tick_WM2 clock_set_3_WS1 tick2;
+reset_WM2 clock_set_4_WS1 rst2;
+mute_1_TC1 1;
+mute_2_TC1 1;
+mute_3_TC1 1;
+mute_4_TC1 1;
+invert_chance_1_TC1 0;
+invert_chance_2_TC1 0;
+invert_chance_3_TC1 0;
+invert_chance_4_TC1 0;
+chance_1_TC1 100;
+chance_2_TC1 100;
+chance_3_TC1 100;
+chance_4_TC1 100;

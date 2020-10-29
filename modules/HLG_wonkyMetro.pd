@@ -1,0 +1,158 @@
+#N canvas 230 497 540 297 10;
+#X obj 0 0 cnv 15 200 190 empty empty empty 12 12 1 14 -253025 -66577
+0;
+#X floatatom 20 75 5 0 9999 1 min_length min_length_set_#1 min_length_#1
+;
+#X floatatom 20 90 5 0 9999 1 max_lag max_lag_set_#1 max_lag_#1;
+#X floatatom 20 105 5 0 127 1 random_length_depth random_length_depth_set_#1
+random_length_depth_#1;
+#X obj 20 55 tgl 15 0 runstop_\$1 runstop_set_\$1 run/stop 17 7 0 10
+-260097 -1 -1 1 1;
+#X floatatom 20 125 5 1 128 1 min_repeats min_repeats_set_#1 min_repeats_#1
+;
+#X floatatom 20 140 5 0 9999 1 max_extras max_extras_set_#1 max_extras_#1
+;
+#X floatatom 20 155 5 0 127 1 random_extras_depth random_extras_depth_set_#1
+random_extras_depth_#1;
+#X obj 100 55 bng 15 250 50 0 restart_\$1 restart_set_\$1 restart 17
+7 0 10 -258113 -1 -1;
+#X obj 0 175 cnv 15 100 15 empty empty tick_\$1 5 8 1 10 -233017 -66577
+0;
+#X obj 100 175 cnv 15 100 15 empty empty reset_\$1 5 8 1 10 -191407
+-66577 0;
+#N canvas 528 340 849 496 wonkyMetro 0;
+#X obj 675 199 + 1;
+#X msg 638 225 set \$1;
+#X msg 638 156 2;
+#X msg 659 135 set 0;
+#X obj 659 94 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 638 94 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 648 267 sel 1;
+#X obj 648 246 >= 3;
+#X obj 707 232 - 1;
+#X obj 648 177 t f f;
+#X obj 638 52 r tick_\$1;
+#X obj 648 289 s reset_\$1;
+#X obj 659 73 r reset_\$1;
+#X floatatom 219 245 5 0 0 1 min_length_#1 min_length_#1 -;
+#X floatatom 195 78 5 0 0 1 max_lag_#1 max_lag_#1 -;
+#X floatatom 204 200 5 0 100 1 random_length_depth_#1 random_length_depth_#1
+-;
+#X obj 189 279 +;
+#X obj 219 265 t b f;
+#X obj 162 123 random;
+#X obj 162 78 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 162 52 r reset_\$1;
+#X obj 129 173 expr $f1*255/$f2;
+#X obj 195 98 t f f;
+#X obj 162 144 t f f;
+#X floatatom 129 199 5 0 0 0 - - -;
+#X floatatom 189 300 5 0 0 0 - - -;
+#X obj 138 325 tgl 15 0 empty runstop_\$1 runstop_\$1 17 7 0 10 -260097
+-1 -1 1 1;
+#X obj 138 376 s tick_\$1;
+#X obj 138 350 metro 100;
+#X floatatom 475 245 5 0 0 1 min_repeats_#1 min_repeats_#1 -;
+#X floatatom 451 78 5 0 0 1 max_extras_#1 max_extras_#1 -;
+#X floatatom 460 200 5 0 100 1 random_extras_depth_#1 random_extras_depth_#1
+-;
+#X obj 445 279 +;
+#X obj 475 265 t b f;
+#X obj 418 123 random;
+#X obj 418 78 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 418 52 r reset_\$1;
+#X obj 451 98 t f f;
+#X obj 418 144 t f f;
+#X floatatom 385 199 5 0 0 0 - - -;
+#X floatatom 445 321 5 0 0 0 - - -;
+#X obj 385 173 expr $f1*255/$f2;
+#X obj 129 403 s osc_metrotime_\$1;
+#X obj 385 372 s osc_repeats_\$1;
+#X obj 39 248 bng 15 250 50 0 empty restart_\$1 restart_\$1 17 7 0
+10 -258113 -1 -1;
+#X obj 39 273 t f f;
+#X msg 76 294 0;
+#X msg 39 294 1;
+#X obj 222 124 + 0.001;
+#X obj 478 124 + 0.001;
+#X obj 189 244 * 0;
+#X obj 445 249 *;
+#X obj 445 346 s repeats_\$1;
+#X obj 707 211 r repeats_\$1;
+#X obj 445 300 - 0;
+#X obj 204 220 / 127;
+#X obj 460 220 / 127;
+#X connect 0 0 1 0;
+#X connect 1 0 2 0;
+#X connect 2 0 9 0;
+#X connect 3 0 2 0;
+#X connect 4 0 3 0;
+#X connect 5 0 2 0;
+#X connect 6 0 11 0;
+#X connect 7 0 6 0;
+#X connect 8 0 7 1;
+#X connect 9 0 7 0;
+#X connect 9 1 0 0;
+#X connect 10 0 5 0;
+#X connect 12 0 4 0;
+#X connect 13 0 17 0;
+#X connect 14 0 22 0;
+#X connect 15 0 55 0;
+#X connect 16 0 25 0;
+#X connect 17 0 16 0;
+#X connect 17 1 16 1;
+#X connect 18 0 23 0;
+#X connect 19 0 18 0;
+#X connect 20 0 19 0;
+#X connect 21 0 24 0;
+#X connect 22 0 18 1;
+#X connect 22 1 48 0;
+#X connect 23 0 21 0;
+#X connect 23 1 50 0;
+#X connect 24 0 42 0;
+#X connect 25 0 28 1;
+#X connect 26 0 28 0;
+#X connect 28 0 27 0;
+#X connect 29 0 33 0;
+#X connect 30 0 37 0;
+#X connect 31 0 56 0;
+#X connect 32 0 54 0;
+#X connect 33 0 32 0;
+#X connect 33 1 32 1;
+#X connect 34 0 38 0;
+#X connect 35 0 34 0;
+#X connect 36 0 35 0;
+#X connect 37 0 34 1;
+#X connect 37 1 49 0;
+#X connect 38 0 41 0;
+#X connect 38 1 51 0;
+#X connect 39 0 43 0;
+#X connect 40 0 52 0;
+#X connect 41 0 39 0;
+#X connect 44 0 45 0;
+#X connect 45 0 47 0;
+#X connect 45 1 46 0;
+#X connect 46 0 26 0;
+#X connect 47 0 26 0;
+#X connect 48 0 21 1;
+#X connect 49 0 41 1;
+#X connect 50 0 16 0;
+#X connect 51 0 32 0;
+#X connect 53 0 8 0;
+#X connect 54 0 40 0;
+#X connect 55 0 50 1;
+#X connect 56 0 51 1;
+#X restore 11 235 pd wonkyMetro;
+#X obj 226 83 HLG_parameter \$1 \$1 runstop 0;
+#X obj 226 103 HLG_parameter \$1 \$1 min_length 1;
+#X obj 226 123 HLG_parameter \$1 \$1 max_lag 2;
+#X obj 226 143 HLG_parameter \$1 \$1 random_length_depth 3;
+#X obj 226 163 HLG_parameter \$1 \$1 min_repeats 4;
+#X obj 226 183 HLG_parameter \$1 \$1 max_extras 5;
+#X obj 226 203 HLG_parameter \$1 \$1 random_extras_depth 6;
+#X obj 5 5 HLG_presetControl \$1 wonkyMetro;
+#X coords 0 -1 1 1 200 190 2 0 0;

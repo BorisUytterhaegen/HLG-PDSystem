@@ -1,0 +1,91 @@
+#N canvas 206 89 594 657 10;
+#X obj 0 0 cnv 15 200 25 empty bg_\$1_\$2 VCA1 5 13 1 12 -237180 -166441
+0;
+#X obj 181 152 list split 1;
+#X obj 181 173 list prepend set;
+#X obj 181 194 list trim;
+#X obj 181 215 receive~;
+#X obj 181 339 my-s~;
+#X obj 22 49 receive updated_\$2;
+#X obj 22 75 float \$1;
+#X obj 22 96 - 1;
+#X obj 61 5 tgl 15 0 mute_\$1_\$2 mute_set_\$1_\$2 on 17 7 0 10 -262130
+-66577 -66577 1 1;
+#X obj 157 5 tgl 15 0 invert_\$1_\$2 invert_set_\$1_\$2 inv 17 7 0
+10 -262130 -66577 -66577 0 1;
+#X obj 96 5 hsl 50 15 0 127 0 0 level_\$1_\$2 level_set_\$1_\$2 empty
+-2 -8 0 10 -262130 -66577 -262144 4900 1;
+#X obj 22 138 route bang;
+#X obj 22 186 s bg_\$1_\$2;
+#X msg 22 162 label -;
+#X msg 92 162 label live;
+#X obj 208 318 list split 1;
+#X obj 242 384 s bg_\$1_\$2;
+#X obj 242 340 list prepend label;
+#X obj 242 361 list trim;
+#X obj 22 117 text get parameters_\$2;
+#X obj 367 274 tgl 15 0 empty invert_\$1_\$2 invert 17 7 0 10 -262144
+-1 -1 0 1;
+#X obj 460 274 tgl 15 0 empty mute_\$1_\$2 mute 17 7 0 10 -262144 -1
+-1 1 1;
+#X floatatom 274 232 5 0 0 1 level level_#1_#2 -;
+#X obj 181 293 expr~ $v1*pow($v2 / 127 \, 4) * 2*($f3-0.5) * $f4;
+#X msg 274 252 \$1 20;
+#X obj 274 273 line~;
+#X obj 30 479 mod 2;
+#X obj 30 458 float \$1;
+#X obj 30 437 loadbang;
+#X obj 30 497 sel 0;
+#X obj 30 565 send bg_\$1_\$2;
+#X msg 30 522 color -1.31586e+07 0 0;
+#X msg 57 543 color -1.51324e+07 0 1;
+#X obj 312 464 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X obj 312 485 metro 10;
+#X obj 312 506 snapshot~;
+#X floatatom 312 527 5 0 0 0 - - -;
+#X obj 392 464 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X obj 392 485 metro 10;
+#X obj 392 506 snapshot~;
+#X floatatom 392 527 5 0 0 0 - - -;
+#X connect 1 0 2 0;
+#X connect 1 1 16 0;
+#X connect 2 0 3 0;
+#X connect 3 0 4 0;
+#X connect 4 0 24 0;
+#X connect 4 0 36 0;
+#X connect 6 0 7 0;
+#X connect 7 0 8 0;
+#X connect 8 0 20 0;
+#X connect 12 0 14 0;
+#X connect 12 1 15 0;
+#X connect 12 1 1 0;
+#X connect 14 0 13 0;
+#X connect 15 0 13 0;
+#X connect 16 0 5 1;
+#X connect 16 1 18 0;
+#X connect 18 0 19 0;
+#X connect 19 0 17 0;
+#X connect 20 0 12 0;
+#X connect 21 0 24 2;
+#X connect 22 0 24 3;
+#X connect 23 0 25 0;
+#X connect 24 0 5 0;
+#X connect 24 0 40 0;
+#X connect 25 0 26 0;
+#X connect 26 0 24 1;
+#X connect 27 0 30 0;
+#X connect 28 0 27 0;
+#X connect 29 0 28 0;
+#X connect 30 0 32 0;
+#X connect 30 1 33 0;
+#X connect 32 0 31 0;
+#X connect 33 0 31 0;
+#X connect 34 0 35 0;
+#X connect 35 0 36 0;
+#X connect 36 0 37 0;
+#X connect 38 0 39 0;
+#X connect 39 0 40 0;
+#X connect 40 0 41 0;
+#X coords 0 -1 1 1 200 25 1 0 0;

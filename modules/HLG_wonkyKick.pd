@@ -1,0 +1,87 @@
+#N canvas 177 191 765 656 10;
+#X obj 54 331 line~;
+#X floatatom 81 181 5 0 0 0 attack attack_#1 -;
+#X floatatom 230 242 5 0 127 0 decay decay_#1 -;
+#X obj 54 289 float;
+#X obj 133 296 float;
+#X obj 54 269 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 133 276 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 54 352 cos~;
+#X obj 54 481 osc~;
+#X msg 133 317 0.5 \$1;
+#X msg 54 310 0 \$1;
+#X obj 54 373 expr~ ($v1+1)/2;
+#X obj 133 183 t b b;
+#X obj 133 163 bng 15 250 50 0 empty trigger_\$1 trigger 17 7 0 10
+-262144 -1 -1;
+#X floatatom 115 418 5 0 0 0 sweep sweep_#1 -;
+#X obj 133 254 del 10;
+#X floatatom 177 439 5 0 0 0 base base_#1 -;
+#X floatatom 114 497 5 0 0 0 dist dist_#1 -;
+#X obj 54 574 *~;
+#X obj 54 460 expr~ $v1 * $f2 + $f3;
+#X floatatom 230 308 5 0 0 0 - - -;
+#X obj 230 262 expr pow($f1/127 \, 4);
+#X obj 230 282 * 2000;
+#X obj 69 394 *~ 1;
+#X obj 0 0 cnv 15 200 105 empty empty empty 20 12 0 14 -146819 -66577
+0;
+#X obj 10 55 bng 15 250 50 0 trigger_\$1 trigger_set_\$1 trigger 17
+7 1 10 -262144 -1 -1;
+#X obj 10 85 nbx 3 15 0 127 0 0 attack_\$1 attack_set_\$1 attack 0
+-8 1 10 -262144 -1 -1 0 256;
+#X obj 47 85 nbx 3 15 0 127 0 0 decay_\$1 decay_set_\$1 decay 0 -8
+1 10 -262144 -1 -1 114 256;
+#X obj 158 85 nbx 3 15 0 127 0 0 dist_\$1 dist_set_\$1 dist 0 -8 1
+10 -262144 -1 -1 21 256;
+#X obj 84 85 nbx 3 15 0 127 0 0 sweep_\$1 sweep_set_\$1 sweep 0 -8
+1 10 -262144 -1 -1 0 256;
+#X obj 121 85 nbx 3 15 0 127 0 0 base_\$1 base_set_\$1 base 0 -8 1
+10 -262144 -1 -1 38 256;
+#X obj 5 5 HLG_presetControl \$1 wonkyKick;
+#X obj 54 595 s~ out_\$1;
+#X obj 115 438 * 3;
+#X obj 54 553 clip~ -1 1;
+#X obj 54 532 *~;
+#X obj 114 518 expr 1 + 2*pow($f1/128 \, 4);
+#X obj 81 210 expr $f1/2 + 2;
+#X obj 237 19 HLG_parameter \$1 \$1 attack 0;
+#X obj 237 39 HLG_parameter \$1 \$1 decay 1;
+#X obj 237 59 HLG_parameter \$1 \$1 sweep 2;
+#X obj 237 79 HLG_parameter \$1 \$1 base 3;
+#X obj 237 99 HLG_parameter \$1 \$1 dist 4;
+#X connect 0 0 7 0;
+#X connect 1 0 37 0;
+#X connect 2 0 21 0;
+#X connect 3 0 10 0;
+#X connect 4 0 9 0;
+#X connect 5 0 3 0;
+#X connect 6 0 4 0;
+#X connect 7 0 11 0;
+#X connect 8 0 35 0;
+#X connect 9 0 0 0;
+#X connect 10 0 0 0;
+#X connect 11 0 19 0;
+#X connect 11 0 23 0;
+#X connect 12 0 15 0;
+#X connect 12 1 5 0;
+#X connect 13 0 12 0;
+#X connect 14 0 33 0;
+#X connect 15 0 6 0;
+#X connect 16 0 19 2;
+#X connect 17 0 36 0;
+#X connect 18 0 32 0;
+#X connect 19 0 8 0;
+#X connect 21 0 22 0;
+#X connect 22 0 4 1;
+#X connect 22 0 20 0;
+#X connect 23 0 18 1;
+#X connect 33 0 19 1;
+#X connect 34 0 18 0;
+#X connect 35 0 34 0;
+#X connect 36 0 35 1;
+#X connect 37 0 3 1;
+#X connect 37 0 15 1;
+#X coords 0 -1 1 1 200 105 1 0 0;

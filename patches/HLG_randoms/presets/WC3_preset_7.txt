@@ -1,0 +1,9 @@
+attack_WC3 5;
+rnd_attack_WC3 10;
+rnd_attack_on_WC3 1;
+release_WC3 10;
+rnd_release_WC3 10;
+thru_WC3 0;
+min_volume_WC3 100;
+max_volume_WC3 0;
+random_volume_depth_WC3 0;

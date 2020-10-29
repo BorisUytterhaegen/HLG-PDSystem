@@ -1,0 +1,8 @@
+dir_1_WS1 0;
+dir_2_WS1 1;
+dir_3_WS1 1;
+dir_4_WS1 0;
+line_1_WS1 4;
+line_2_WS1 1;
+line_3_WS1 2;
+line_4_WS1 3;

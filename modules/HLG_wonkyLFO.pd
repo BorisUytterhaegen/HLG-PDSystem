@@ -1,0 +1,41 @@
+#N canvas 746 425 683 445 10;
+#X obj 38 316 osc~;
+#X floatatom 38 233 5 0 0 0 freq freq_#1 -;
+#X obj 38 337 s~ osc_\$1;
+#X obj 0 0 cnv 15 200 75 empty empty empty 20 12 0 14 -191632 -66577
+0;
+#X obj 0 75 HLG_lfoControl 1 \$1;
+#X obj 0 110 HLG_lfoControl 2 WL1;
+#X obj 0 180 HLG_lfoControl 4 WL1;
+#X obj 5 5 HLG_presetControl \$1 wonkyLFO;
+#X obj 5 55 nbx 3 15 0 127 0 0 freq_\$1 freq_set_\$1 freq 35 7 1 10
+-261891 -1 -1 20 256;
+#X obj 100 55 cnv 15 100 15 empty bg_freq_\$1 0.184513_Hertz 5 7 1
+10 -191632 -66577 0;
+#X obj 58 293 s bg_freq_\$1;
+#X msg 58 274 label \$1_Hertz;
+#X obj 38 253 expr 300*pow($f1 / 127 \, 4);
+#X obj 221 37 HLG_parameter \$1 1_\$1 level 1;
+#X obj 221 17 HLG_parameter \$1 \$1 freq 0;
+#X obj 221 57 HLG_parameter \$1 2_\$1 level 2;
+#X obj 221 77 HLG_parameter \$1 3_\$1 level 3;
+#X obj 222 97 HLG_parameter \$1 4_\$1 level 4;
+#X obj 221 117 HLG_parameter \$1 1_\$1 bits 5;
+#X obj 221 137 HLG_parameter \$1 2_\$1 bits 6;
+#X obj 221 157 HLG_parameter \$1 3_\$1 bits 7;
+#X obj 221 177 HLG_parameter \$1 4_\$1 bits 8;
+#X obj 221 197 HLG_parameter \$1 1_\$1 offset 9;
+#X obj 221 257 HLG_parameter \$1 4_\$1 offset 12;
+#X obj 221 217 HLG_parameter \$1 2_\$1 offset 10;
+#X obj 221 237 HLG_parameter \$1 3_\$1 offset 11;
+#X obj 221 277 HLG_parameter \$1 1_\$1 invert 13;
+#X obj 221 297 HLG_parameter \$1 2_\$1 invert 14;
+#X obj 221 317 HLG_parameter \$1 3_\$1 invert 15;
+#X obj 0 145 HLG_lfoControl 3 \$1;
+#X obj 221 336 HLG_parameter \$1 4_\$1 invert 16;
+#X connect 0 0 2 0;
+#X connect 1 0 12 0;
+#X connect 11 0 10 0;
+#X connect 12 0 0 0;
+#X connect 12 0 11 0;
+#X coords 0 -1 1 1 200 215 1 0 0;

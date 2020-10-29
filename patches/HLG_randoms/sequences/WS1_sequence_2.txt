@@ -1,0 +1,4 @@
+pitch_set_WV1 60 62 65 67 70 72;
+offset_set_1_WS1 0 12;
+pitch_set_WV2 60 65 75 70;
+offset_set_3_WS1 0 24;

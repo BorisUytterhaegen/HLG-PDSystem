@@ -1,0 +1,9 @@
+pitch_WV3 36;
+max_pitch_WV3 0;
+random_pitch_depth_WV3 0;
+FM_pitch_WV3 0;
+FM_max_pitch_WV3 0;
+random_FM_pitch_depth_WV3 0;
+FM_amount_WV3 0;
+FM_max_amount_WV3 0;
+random_FM_amount_depth_WV3 0;

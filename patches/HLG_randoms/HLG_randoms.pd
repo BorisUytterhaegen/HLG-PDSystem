@@ -1,0 +1,33 @@
+#N canvas 0 22 1440 852 10;
+#X obj 59 607 text define -k todo;
+#A set simple VC0 \; sig to float converter met S&H \; logic module
+if x or/and/xor/ff y then z \; amplitude modulation~ in WC \; wonkyDelay
+\; wonkeyReverb \; enkel max amount en geen scaling op random \; naming
+juist voor wonky objecten \; exp/lin or log on wonkyContour attack
+and release \; ringmodulator \; LOAD PROBLEM!!!!!!! \; BBBBBBBDDDDDDDDDDDDDDDD
+module \;;
+#X obj 2 2 HLG_wonkyMetro WM1;
+#X obj 408 2 HLG_wonkyVCO WV1;
+#X obj 408 210 HLG_wonkyVCO WV2;
+#X obj 611 2 HLG_wonkyContour WC1;
+#X obj 814 2 HLG_sigMixer SM1;
+#X obj 205 2 HLG_wonkyRouter4 TC1;
+#X obj 205 418 HLG_sigRouter4 SC1;
+#X obj 1017 516 HLG_patchControl HLG_randoms;
+#X obj 2 195 HLG_wonkyMetro WM2;
+#X obj 205 160 HLG_wonkyRouter8 TC2;
+#X obj 2 388 HLG_wonkyMetro WM3;
+#X obj 611 145 HLG_wonkyContour WC2;
+#X obj 205 576 HLG_sigRouter8 SC2;
+#X obj 408 418 HLG_wonkyVCO WV3;
+#X obj 611 288 HLG_wonkyContour WC3;
+#X obj 814 270 HLG_wonkySeq WS1;
+#X obj 1220 2 HLG_wonkyLFO WL1;
+#X obj 408 626 HLG_ringMod RM1;
+#X obj 1017 2 HLG_sigMixer SM2;
+#X obj 1017 270 HLG_wonkyKick WK1;
+#X obj 1017 378 HLG_wonkyPerc WP1;
+#X obj 408 694 HLG_adder Add1;
+#X obj 60 633 tabwrite~;
+#X obj 1220 220 HLG_wonkyLFO WL2;
+#X obj 732 616 HLG_WonkyContour WC4;
