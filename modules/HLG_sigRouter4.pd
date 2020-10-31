@@ -1,10 +1,6 @@
 #N canvas 726 323 605 528 10;
 #X obj 0 0 cnv 15 200 55 empty empty empty 12 12 1 14 -262130 -66577
 0;
-#X obj 0 55 HLG_sigLink 1 SC1;
-#X obj 0 80 HLG_sigLink 2 SC1;
-#X obj 0 105 HLG_sigLink 3 SC1;
-#X obj 0 130 HLG_sigLink 4 SC1;
 #X obj 228 21 HLG_parameter \$1 1_\$1 mute 4;
 #X obj 228 41 HLG_parameter \$1 2_\$1 mute 5;
 #X obj 228 61 HLG_parameter \$1 3_\$1 mute 6;
@@ -18,4 +14,9 @@
 #X obj 228 223 HLG_parameter \$1 3_\$1 invert 14;
 #X obj 228 243 HLG_parameter \$1 4_\$1 invert 15;
 #X obj 5 5 HLG_presetControl \$1 sigRouter4;
+#X obj 0 55 HLG_sigLink 1 \$1;
+#X obj 0 80 HLG_sigLink 2 \$1;
+#X obj 0 105 HLG_sigLink 3 \$1;
+#X obj 0 130 HLG_sigLink 4 \$1;
+#X obj 228 272 HLG_netReceive \$1;
 #X coords 0 -1 1 1 200 155 2 0 0;
