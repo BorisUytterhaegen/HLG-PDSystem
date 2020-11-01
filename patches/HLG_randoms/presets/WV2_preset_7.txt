@@ -1,4 +1,4 @@
-pitch_WV2 67;
+pitch_WV2 82;
 max_pitch_WV2 22;
 rnd_pitch_WV2 0;
 FM_pitch_WV2 4;

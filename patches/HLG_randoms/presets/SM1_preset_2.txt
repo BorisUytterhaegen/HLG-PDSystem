@@ -4,7 +4,7 @@ out_WC3 WC3;
 out_RM1 RM1;
 level_1_SM1 92.3636;
 level_2_SM1 78.2525;
-level_3_SM1 127;
+level_3_SM1 91.0808;
 level_4_SM1 127;
 pan_1_SM1 13.6071;
 pan_2_SM1 69.5476;

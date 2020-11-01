@@ -1,9 +1,6 @@
-attack_WC2 4;
-rnd_attack_WC2 0;
+attack_WC2 3;
+rnd_attack_WC2 3;
 rnd_attack_on_WC2 0;
-release_WC2 3;
-rnd_release_WC2 5;
+release_WC2 6;
+rnd_release_WC2 0;
 thru_WC2 0;
-min_volume_WC2 100;
-max_volume_WC2 0;
-random_volume_depth_WC2 0;

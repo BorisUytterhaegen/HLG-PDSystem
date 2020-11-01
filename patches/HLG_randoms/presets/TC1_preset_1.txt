@@ -1,8 +1,8 @@
-tick_WM1 clock_set_1_WS1 tick1;
-reset_WM1 trigger_set_WK1 kick;
-tick_WM2 clock_set_3_WS1 tick2;
-reset_WM2 clock_set_4_WS1 rst2;
-mute_1_TC1 0;
+link_1_TC1 reset_WM2 trigger_set_WP1 sneir;
+link_2_TC1 reset_WM1 trigger_set_WK1 kick;
+link_3_TC1 tick_WM2 clock_set_3_WS1 tick2;
+link_4_TC1 reset_WM2 clock_set_4_WS1 rst2;
+mute_1_TC1 1;
 mute_2_TC1 1;
 mute_3_TC1 0;
 mute_4_TC1 0;

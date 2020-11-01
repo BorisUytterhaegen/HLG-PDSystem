@@ -1,0 +1,16 @@
+mute_1_TC1 0;
+mute_2_TC1 0;
+mute_3_TC1 0;
+mute_4_TC1 0;
+mute_1_TC1 0;
+mute_2_TC1 0;
+mute_3_TC1 0;
+mute_4_TC1 0;
+invert_chance_1_TC1 0;
+invert_chance_2_TC1 0;
+invert_chance_3_TC1 0;
+invert_chance_4_TC1 0;
+chance_1_TC1 0;
+chance_2_TC1 0;
+chance_3_TC1 0;
+chance_4_TC1 0;

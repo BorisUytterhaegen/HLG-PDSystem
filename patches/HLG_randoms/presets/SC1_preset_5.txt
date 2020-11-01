@@ -1,7 +1,7 @@
-out_WV1 in_WC1 VCA1;
-out_WV2 in_WC2 VCA2;
-out_WV3 in_WC3 VCA3;
-;
+link_1_SC1 out_WV1 in_WC1 VCA1;
+link_1_SC1 out_WV2 in_WC2 VCA2;
+link_3_SC1 out_WV3 in_WC3 VCA3;
+link_4_SC1;
 mute_1_SC1 1;
 mute_2_SC1 1;
 mute_3_SC1 1;
@@ -13,3 +13,4 @@ level_4_SC1 1.13797;
 invert_1_SC1 0;
 invert_2_SC1 0;
 invert_3_SC1 0;
+invert_4_SC1 0;

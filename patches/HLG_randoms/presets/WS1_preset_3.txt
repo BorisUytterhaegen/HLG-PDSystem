@@ -12,5 +12,5 @@ send_3_WS1 2;
 send_4_WS1 3;
 offset_1_WS1 0;
 offset_2_WS1 0;
-offset_3_WS1 24;
+offset_3_WS1 0;
 offset_4_WS1 0;

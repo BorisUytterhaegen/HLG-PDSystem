@@ -1,4 +1,4 @@
-#N canvas 417 222 1440 852 10;
+#N canvas 451 182 1334 791 10;
 #X obj 59 607 text define -k todo;
 #A set simple VC0 \; sig to float converter met S&H \; logic module
 if x or/and/xor/ff y then z \; amplitude modulation~ in WC \; wonkyDelay

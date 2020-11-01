@@ -14,4 +14,4 @@ offset_4_WL1 0;
 invert_1_WL1 1;
 invert_2_WL1 0;
 invert_3_WL1 0;
-invert_1_WL1 1;
+invert_4_WL1 1;

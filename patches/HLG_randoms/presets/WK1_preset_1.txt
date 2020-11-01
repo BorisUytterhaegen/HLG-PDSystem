@@ -1,5 +1,5 @@
 attack_WK1 2;
-decay_WK1 85;
-sweep_WK1 5;
-base_WK1 38;
-dist_WK1 37;
+decay_WK1 100;
+sweep_WK1 15;
+base_WK1 10;
+dist_WK1 10;

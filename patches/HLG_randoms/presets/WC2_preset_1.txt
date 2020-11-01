@@ -1,6 +1,6 @@
-attack_WC2 127;
+attack_WC2 3;
 rnd_attack_WC2 3;
 rnd_attack_on_WC2 0;
-release_WC2 127;
+release_WC2 6;
 rnd_release_WC2 0;
 thru_WC2 0;

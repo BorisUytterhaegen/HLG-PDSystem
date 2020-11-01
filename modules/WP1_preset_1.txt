@@ -1,0 +1,10 @@
+attack_WP1 0;
+base_decay_WP1 0;
+sweep_WP1 0;
+base_WP1 0;
+dist_WP1 0;
+FM_freq_WP1 0;
+FM_amt_WP1 0;
+noise_decay_WP1 0;
+noise_WP1 0;
+hipass_WP1 0;

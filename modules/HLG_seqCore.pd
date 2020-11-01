@@ -1,11 +1,11 @@
-#N canvas 620 307 820 526 10;
-#X obj 244 130 bng 15 250 50 0 empty reset_\$1_\$2 empty 17 7 0 10
+#N canvas 5 430 820 526 10;
+#X obj 244 134 bng 15 250 50 0 empty reset_\$1_\$2 empty 17 7 0 10
 -258113 -262144 -1;
-#X obj 187 130 bng 15 250 50 0 empty clock_\$1_\$2 empty 17 7 0 10
+#X obj 187 134 bng 15 250 50 0 empty clock_\$1_\$2 empty 17 7 0 10
 -4160 -262144 -1;
-#X obj 187 213 pack f f;
-#X msg 187 234 \$1 \$2 1;
-#X obj 187 255 unpack f f f;
+#X obj 187 217 pack f f;
+#X msg 187 238 \$1 \$2 1;
+#X obj 187 259 unpack f f f;
 #N canvas 989 72 450 394 lengths 0;
 #X obj 21 15 inlet;
 #X obj 21 270 outlet;
@@ -40,12 +40,12 @@
 #X connect 13 1 7 0;
 #X connect 14 0 4 0;
 #X restore 355 92 pd lengths;
-#X floatatom 187 192 5 0 0 0 - - -;
-#X obj 486 351 unpack f f f;
-#X msg 486 329 \$1 0 1;
+#X floatatom 187 196 5 0 0 0 - - -;
+#X obj 486 352 unpack f f f;
+#X msg 486 331 \$1 0 1;
 #X msg 316 178 set \$1;
 #X floatatom 486 256 5 0 127 1 send send_#1_#2 -;
-#X obj 187 387 send;
+#X obj 187 392 send;
 #N canvas 52 239 450 528 counter 0;
 #X obj 33 237 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
@@ -104,8 +104,8 @@
 #X connect 23 0 12 0;
 #X connect 24 0 6 0;
 #X connect 24 1 7 0;
-#X restore 187 149 pd counter;
-#X obj 187 170 t b f;
+#X restore 187 153 pd counter;
+#X obj 187 174 t b f;
 #X floatatom 412 114 5 0 0 0 - - -;
 #X obj 412 153 t b f;
 #X obj 445 277 float;
@@ -122,8 +122,8 @@
 0 -8 1 10 -262144 -1 -1 0 256;
 #X obj 412 173 send length_reset_\$1_\$2;
 #X obj 439 193 send length_\$1_\$2;
-#X obj 187 276 text get seq_\$2;
-#X obj 486 373 text get seq_\$2;
+#X obj 187 280 text get seq_\$2;
+#X obj 486 374 text get seq_\$2;
 #X obj 35 8 r clock_\$2;
 #X obj 53 27 r reset_\$2;
 #X obj 445 236 r seq_updated_\$2;
@@ -133,12 +133,12 @@
 #X obj 144 55 nbx 3 15 0 127 0 0 line_\$1_\$2 line_set_\$1_\$2 empty
 0 -8 1 10 -262144 -1 -1 0 256;
 #X obj 182 55 nbx 3 15 -63 64 0 0 offset_\$1_\$2 offset_set_\$1_\$2
-empty 0 -8 1 10 -262144 -1 -262144 0 256;
+empty 0 -8 1 10 -262144 -1 -262144 12 256;
 #X obj 25 75 cnv 15 115 15 empty label_\$1_\$2 pitch_set_WV1 5 7 1
 10 -233017 -66577 0;
-#X obj 486 418 list prepend label;
-#X obj 486 459 s label_\$1_\$2;
-#X obj 486 439 list trim;
+#X obj 486 419 list prepend label;
+#X obj 486 460 s label_\$1_\$2;
+#X obj 486 440 list trim;
 #X obj 316 133 mod 127;
 #X floatatom 316 154 5 0 0 0 - - -;
 #X obj 140 75 cnv 15 85 15 empty linelabel_\$1_\$2 line_0 5 7 1 10
@@ -148,13 +148,13 @@ empty 0 -8 1 10 -262144 -1 -262144 0 256;
 #X obj 275 73 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
 #X floatatom 316 71 5 0 127 1 line line_#1_#2 -;
-#X obj 316 459 s linelabel_\$1_\$2;
-#X obj 316 417 list prepend label;
-#X obj 316 438 list trim;
-#X obj 187 317 + 0;
-#X floatatom 202 297 5 0 0 0 offset offset_#1_#2 -;
-#X msg 316 396 line_\$1;
-#X obj 187 361 clip -127 127;
+#X obj 316 460 s linelabel_\$1_\$2;
+#X obj 316 418 list prepend label;
+#X obj 316 439 list trim;
+#X obj 187 321 + 0;
+#X floatatom 202 301 5 0 0 0 offset offset_#1_#2 -;
+#X msg 316 397 line_\$1;
+#X obj 187 366 clip -127 127;
 #X connect 0 0 12 1;
 #X connect 1 0 12 0;
 #X connect 2 0 3 0;

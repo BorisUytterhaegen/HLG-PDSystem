@@ -8,8 +8,8 @@
 #N canvas 42 107 506 428 wonkySequencer 0;
 #X msg 21 326 click;
 #X obj 71 346 text define -k seq_\$1;
-#A set pitch_set_WV1 60 62 65 67 70 72 \; offset_set_1_WS1 0 12 \;
-pitch_set_WV2 60 65 75 70 \; offset_set_3_WS1 0 24 \;;
+#A set pitch_set_WV1 60 62 65 61 67 7 \; offset_set_1_WS1 0 12 -5 \;
+pitch_set_WV2 60 65 75 70 72 \; offset_set_3_WS1 0 7 10 \;;
 #X obj 21 306 bng 15 250 50 0 empty seq_\$1 seq 17 7 0 10 -257985 -1
 -1;
 #X obj 71 304 list prepend write;
@@ -83,4 +83,5 @@ pitch_set_WV2 60 65 75 70 \; offset_set_3_WS1 0 24 \;;
 #X obj 400 130 HLG_parameter \$1 2_\$1 offset 13;
 #X obj 400 150 HLG_parameter \$1 3_\$1 offset 14;
 #X obj 400 170 HLG_parameter \$1 4_\$1 offset 15;
+#X obj 251 210 HLG_netReceive \$1;
 #X coords 0 -1 1 1 200 235 1 0 0;

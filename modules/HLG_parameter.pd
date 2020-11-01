@@ -1,4 +1,4 @@
-#N canvas 499 162 792 599 10;
+#N canvas 1171 379 792 599 10;
 #X obj 168 469 text set parameters_\$1;
 #X obj 168 449 list split 2;
 #X obj 238 119 list split 1;

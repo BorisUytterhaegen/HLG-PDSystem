@@ -1,0 +1,16 @@
+dir_1_WS1 0;
+dir_2_WS1 0;
+dir_3_WS1 0;
+dir_4_WS1 0;
+line_1_WS1 0;
+line_2_WS1 0;
+line_3_WS1 0;
+line_4_WS1 0;
+send_1_WS1 0;
+send_2_WS1 0;
+send_3_WS1 0;
+send_4_WS1 0;
+offset_1_WS1 0;
+offset_2_WS1 0;
+offset_3_WS1 0;
+offset_4_WS1 0;
