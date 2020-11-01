@@ -15,6 +15,7 @@
 #X obj 34 187 unpack s f s;
 #X msg 57 126 send \$3;
 #X obj 34 96 t l l l;
+#X obj 85 15 inlet;
 #X connect 1 0 0 0;
 #X connect 3 0 5 1;
 #X connect 4 0 5 0;
@@ -32,3 +33,4 @@
 #X connect 14 0 12 0;
 #X connect 14 1 13 0;
 #X connect 14 2 9 0;
+#X connect 15 0 10 0;

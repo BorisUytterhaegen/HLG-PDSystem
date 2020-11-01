@@ -13,6 +13,7 @@
 <port> <address>" on start-up? \, Listening for messages from \$2 on
 port \$1 - anything connected?;
 #X obj 29 310 print netreceive_msg;
+#X obj 95 22 inlet;
 #X connect 1 0 2 0;
 #X connect 2 0 7 0;
 #X connect 2 1 10 0;
@@ -25,3 +26,4 @@ port \$1 - anything connected?;
 #X connect 8 0 4 1;
 #X connect 9 0 3 0;
 #X connect 10 0 0 0;
+#X connect 12 0 2 0;
