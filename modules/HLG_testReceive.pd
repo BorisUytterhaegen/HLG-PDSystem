@@ -1,4 +1,4 @@
-#N canvas 432 324 789 438 12;
+#N canvas 970 389 789 438 12;
 #X obj 237 120 print hello;
 #X obj 29 22 r listen;
 #X obj 29 46 t l l;
@@ -12,9 +12,11 @@
 #X msg 237 66 Did you set the desired address and port with -send "listen
 <port> <address>" on start-up? \, Listening for messages from \$2 on
 port \$1 - anything connected?;
+#X obj 29 310 print netreceive_msg;
 #X connect 1 0 2 0;
 #X connect 2 0 7 0;
 #X connect 2 1 10 0;
+#X connect 3 0 11 0;
 #X connect 3 1 5 0;
 #X connect 4 0 6 0;
 #X connect 5 0 4 0;
