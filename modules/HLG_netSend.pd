@@ -1,6 +1,5 @@
-#N canvas 380 357 764 569 12;
+#N canvas 757 381 764 569 12;
 #X obj 24 175 netsend;
-#X msg 24 153 connect pisound1 3000;
 #X floatatom 24 24 5 0 0 0 - - -;
 #X obj 24 48 list prepend pgm_change;
 #X obj 253 24 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
@@ -14,13 +13,15 @@
 #X obj 253 184 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj 253 204 list prepend dsp;
-#X connect 1 0 0 0;
-#X connect 2 0 3 0;
-#X connect 3 0 0 0;
-#X connect 4 0 5 0;
-#X connect 5 0 0 0;
-#X connect 6 0 9 0;
-#X connect 7 0 8 0;
+#X msg 24 153 connect pisound1 3005;
+#X connect 1 0 2 0;
+#X connect 2 0 0 0;
+#X connect 3 0 4 0;
+#X connect 4 0 0 0;
+#X connect 5 0 8 0;
+#X connect 6 0 7 0;
+#X connect 7 0 0 0;
 #X connect 8 0 0 0;
-#X connect 9 0 0 0;
-#X connect 10 0 11 0;
+#X connect 9 0 10 0;
+#X connect 10 0 0 0;
+#X connect 11 0 0 0;
