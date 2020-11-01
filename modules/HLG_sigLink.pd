@@ -1,5 +1,5 @@
 #N canvas 706 355 581 377 10;
-#X obj 0 0 cnv 15 200 25 empty bg_\$1_\$2 VCA1 5 13 1 12 -237180 -166441
+#X obj 0 0 cnv 15 200 25 empty bg_\$1_\$2 - 5 13 1 12 -237180 -166441
 0;
 #X obj 155 94 list split 1;
 #X obj 155 115 list prepend set;
@@ -11,7 +11,7 @@
 #X obj 157 5 tgl 15 0 invert_\$1_\$2 invert_set_\$1_\$2 inv 17 7 0
 10 -262130 -66577 -66577 1 1;
 #X obj 96 5 hsl 50 15 0 127 0 0 level_\$1_\$2 level_set_\$1_\$2 empty
--2 -8 0 10 -262130 -66577 -262144 0 1;
+-2 -8 0 10 -262130 -66577 -262144 1500 1;
 #X obj 16 76 route bang;
 #X obj 16 128 s bg_\$1_\$2;
 #X msg 16 100 label -;
@@ -64,6 +64,7 @@
 #X connect 13 0 9 0;
 #X connect 17 0 16 0;
 #X restore 209 8 pd initialize;
+#X obj 334 69 print link_set_\$1_\$2;
 #X connect 1 0 2 0;
 #X connect 1 1 13 0;
 #X connect 2 0 3 0;
@@ -85,4 +86,5 @@
 #X connect 21 0 22 0;
 #X connect 22 0 20 1;
 #X connect 23 0 9 0;
+#X connect 23 0 25 0;
 #X coords 0 -1 1 1 200 25 1 0 0;
